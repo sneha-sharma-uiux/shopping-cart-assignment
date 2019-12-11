@@ -1,18 +1,29 @@
 {
-    "name": "shopping-cart-assignment-master",
+    "name": "shopping-site",
     "version": "1.0.0",
-    "description": "shopping site",
+    "description": "Shopping site",
     "main": "index.js",
-    "scripts": {
-        "sass": "node-sass -w scss/ -o assets/css/ --recursive",
-        "start": "node index.js"
-    },
+    "repository": "",
     "author": "",
-    "license": "ISC",
-    "devDependencies": {
-        "node-sass": "^4.13.0"
-    },
+    "license": "MIT",
     "dependencies": {
-        "handlebars": "^4.5.3"
+        "babel-eslint": "^8.2.3",
+        "body-parser": "^1.19.0",
+        "cookie-parser": "^1.4.4",
+        "express": "^4.16.3",
+        "express-handlebars": "^3.0.0",
+        "express-session": "^1.17.0",
+        "express-validator": "^4.3.0",
+        "handlebars": "^4.0.11",
+        "handlebars-helpers": "^0.10.0",
+        "node-sass": "^4.9.0",
+        "node-sass-middleware": "^0.11.0",
+        "nodemon": "^1.17.4"
+    },
+    "scripts": {
+        "start": "node index.js",
+        "dev": "source env.sh && concurrently \"nodemon index.js\" \"open \"http://localhost:4200\"\"",
+        "build": "node index.js",
+        "test": "node index.js --env=jsdom"
     }
 }
