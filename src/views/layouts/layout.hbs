@@ -11,24 +11,26 @@
     <title>{{ title }}</title>
 
     <!-- App styles -->
-    <link rel="stylesheet" href="/index.css" />
+    <link rel="stylesheet" href="/css/index.css" />
   </head>
   <body>
     <!-- Wrapper div for the application -->
     <div class="app">
-      {{> header}}
+      {{> components/organisms/header/o-header}}
 
       <!-- App content -->
-      <div>
+      <main role="main">
         {{{ body }}}
-      </div>
+      </main>
 
-      {{> footer}}
+      {{> components/organisms/footer/o-footer}}
     </div>
 
     <!-- Javascripts -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="/js/script.js"></script>
-    
+    <script src="/js/validation.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/views/common/components/organisms/mini-cart/cart.js"></script>
+    <script src="/views/features/home/home.js"></script>
+    <script src="/views/features/product/product.js"></script>
   </body>
 </html>
